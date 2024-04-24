@@ -1,5 +1,7 @@
 
 Dictionary Application Readme
+
+
 Overview
 This C++ program implements a dictionary using a Binary Search Tree (BST) data structure. It provides functionalities such as dictionary generation, saving and updating, word count, spell checking, and suggesting similar words based on a given input.
 
