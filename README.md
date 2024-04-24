@@ -1,74 +1,34 @@
+# Dictionary Application
 
-Dictionary Application Readme
+## Overview
 
-
-Overview
 This C++ program implements a dictionary using a Binary Search Tree (BST) data structure. It provides functionalities such as dictionary generation, saving and updating, word count, spell checking, and suggesting similar words based on a given input.
 
-Files
-Dictionary.h: Header file containing the Dictionary class declaration.
-BST.h: Header file containing the BST class declaration.
-main.cpp: Main program file demonstrating the usage of the dictionary.
-Compilation and Execution
-To compile and run the program:
+## Files
 
-Ensure you have a C++ compiler installed (e.g., g++).
-Compile the program using the command:
-css
-Copy code
-g++ main.cpp -o dictionary
-Run the compiled executable:
-bash
-Copy code
-./dictionary
-Functionality
-1. Dictionary Generation
-The Dictionary_generation function reads a list of words from a file and populates the dictionary.
+- `Dictionary.h`: Header file containing the `Dictionary` class declaration.
+- `Dictionary.cpp`: Source file containing the implementation of the `Dictionary` class.
+- `BST.h`: Header file containing the `BST` class declaration.
+- `BST.cpp`: Source file containing the implementation of the `BST` class.
+- `main.cpp`: Main program file demonstrating the usage of the dictionary.
 
-2. Dictionary Save
-The Dictionary_save function saves the contents of the dictionary to a specified output file.
+## Compilation and Execution
 
-3. Dictionary Update
-The Dictionary_update function updates the dictionary by either adding or removing a word.
+### Prerequisites
+- C++ compiler (e.g., g++)
+- Standard C++ libraries
 
-4. Word Count
-The wordCount function calculates the total number of words in the dictionary.
+### Compilation
+```sh
+g++ main.cpp Dictionary.cpp BST.cpp -o dictionary
 
-5. Spell Check and Suggestions
-The check function checks if a word is spelled correctly. If not, it suggests similar words using a Hamming distance algorithm.
+## Functionality
 
-Usage Example
-cpp
-Copy code
-#include "Dictionary.h"
-#include <iostream>
-#include <vector>
-using namespace std;
+- **Dictionary Generation**: Reads a list of words from a file and populates the dictionary.
+- **Dictionary Save**: Saves the contents of the dictionary to a specified output file.
+- **Dictionary Update**: Updates the dictionary by adding or removing a word.
+- **Word Count**: Calculates the total number of words in the dictionary.
+- **Spell Check and Suggestions**: Checks if a word is spelled correctly and suggests similar words using a Hamming distance algorithm.
 
-int main() {
-    // Create a Dictionary object
-    Dictionary<string, bool> dic1;
-    
-    // File containing word list
-    string file = "wordlist.txt";
-
-    // Generate and save the dictionary
-    dic1.Dictionary_generation_save(file);
-
-    // Update the dictionary (remove "aaaa")
-    dic1.Dictionary_update("ex1", 2);
-
-    // Check a word and get suggestions
-    vector<string> suggestions;
-    dic1.check("ex2", suggestions);
-
-    // Display the count of words in the dictionary
-    cout << "Word count: " << dic1.wordCount() << endl;
-
-    return 0;
-}
-Dependencies
-Standard C++ libraries (<iostream>, <string>, <fstream>, <sstream>, <cctype>, <vector>, <algorithm>).
-Notes
-Make sure to provide a valid word list file (wordlist.txt) for dictionary generation.
-The program demonstrates basic functionalities. You can extend it as needed for more advanced features.
+## Note
+-Make sure to provide a valid word list file (wordlist.txt) for dictionary generation.
