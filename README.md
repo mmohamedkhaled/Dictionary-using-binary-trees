@@ -22,13 +22,4 @@ This C++ program implements a dictionary using a Binary Search Tree (BST) data s
 ```sh
 g++ main.cpp Dictionary.cpp BST.cpp -o dictionary
 
-#### Functionality
 
-- **Dictionary Generation**: Reads a list of words from a file and populates the dictionary.
-- **Dictionary Save**: Saves the contents of the dictionary to a specified output file.
-- **Dictionary Update**: Updates the dictionary by adding or removing a word.
-- **Word Count**: Calculates the total number of words in the dictionary.
-- **Spell Check and Suggestions**: Checks if a word is spelled correctly and suggests similar words using a Hamming distance algorithm.
-
-##### Note
--Make sure to provide a valid word list file (wordlist.txt) for dictionary generation.
